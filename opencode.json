@@ -1,0 +1,17 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "model": "opencode/deepseek-v4.1-flash-free",
+  "instructions": ["rules.md", "memory.md", "phases.md"],
+  "mcp": {
+    "shadcn": { "type": "local", "command": ["npx", "shadcn@latest", "mcp"], "enabled": true },
+    "motionsites": { "type": "remote", "url": "https://motionsites.ai/api/mcp", "enabled": true },
+    "chrome-devtools": { "type": "local", "command": ["npx", "-y", "chrome-devtools-mcp@latest"], "enabled": true },
+    "stitch": {
+  "type": "remote",
+  "url": "https://stitch.googleapis.com/mcp",
+  "headers": { "X-Goog-Api-Key": "{env:STITCH_API_KEY}" },
+  "enabled": false
+}
+    }
+  }
+}
